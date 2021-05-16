@@ -51,13 +51,11 @@ var API = API_URL + username; //Full API URL (DONT EDIT)
 var input = document.getElementById("username"); //The input
 var blocked = "The name you entered is blocked!"; //The Error Message Blocked
 var dropping = "The name you entered is dropping on "; //The Dropping Message
+var table = document.getElementById("myTable");
 
 input.value = username; //Sets the input value to the username
 if (username !== "") { //Checks if the username isn"t blank
-  fetch('https://post-profiles.mcapi.workers.dev/', {
-    method: 'POST', body: JSON.stringify("Seeped, hi, marc".replaceAll(" ", "").split(",")),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(response => response.json()).then((main) => {console.log(main[(main.length - 1)].name)});
+ fetch('https://www.faav.tk/v1/api/bulk?body='+username).then(response => response.json()).then((main) => {
+    console.log(main)
+  });
     }
