@@ -56,6 +56,8 @@ var table = document.getElementById("myTable");
 input.value = username; //Sets the input value to the username
 if (username !== "") { //Checks if the username isn"t blank
  fetch('https://www.faav.tk/v1/api/bulk?body='+username).then(response => response.json()).then((main) => {
-    console.log(main)
+    for (var i = 0; i < main.length; i++) {
+    table += "<tr><td>"+main[i].name+"<\/td><\/tr>";
+    }
   });
     }
