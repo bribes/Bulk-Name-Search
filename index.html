@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- Scripts: -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://withdrew.github.io/FaavJS/FaavJS@v1.0.min.js"></script>
+      <script async="true" src="./checker.js"></script>
+      <script async="true" src="./darkmode.js"></script>
+      <!-- CSS: -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" rel="stylesheet">
+      <link href="./style.css" rel="stylesheet">
+      <link href="./darkmode.css" rel="stylesheet">
+      <title>Name History Checker</title>
+      <!-- Favicon: -->
+      <link href="./favicon.ico" id="icon" rel="icon"sizes="any" type="image/svg+xml+x-icon">
+   </head>
+   <body>
+      <!-- Dark Mode Button: -->
+      <button class="lightmode-button" id="darkmodebtn" onclick="darkMode()">🌓</button>
+      <center>
+         <!-- Title: -->
+         <h1 class="thin">Name History Checker</h1>
+         <!-- Form: -->
+         <form action="?" class="pure-form" method="get" spellcheck="false">
+            <input autofocus="" id="username" name="username" placeholder="Username / UUID" type="text"> <input class="pure-button-primary pure-button br4" type="submit" value="Check">
+         </form>
+         <br>
+         <!-- Name History: -->
+         <table>
+            <tbody id="myTable"></tbody>
+         </table>
+         <!-- Source Code Button: -->
+         <p>Here is the <a href="https://github.com/withdrew/Name-History-Checker" target="_blank">Source code</a>.</p>
+      </center>
+   </body>
+</html>
